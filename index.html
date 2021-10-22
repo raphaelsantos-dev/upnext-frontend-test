@@ -8,10 +8,290 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./index.scss" />
+    <link rel="stylesheet" href="geral.css" />
+    <link rel="stylesheet" href="plantas.css">
   </head>
 
   <body>
-    <img src="images/icons/logo-white.svg" alt="Greenthumb" />
+    <header>
+      <div class="imgs">
+        <div class="div-img-left">
+          <picture>
+            <source media="(max-width: 550px)" srcset="images/hero/mobile/mobile-leaves.png">
+            <img class="img-left" src="images/hero/desktop/left-leaves.png" alt="">
+          </picture>
+          <div class="elementos">
+            <img class="img-ico-green" src="images/icons/logo-white.svg" alt="">
+            <h1 class="text-img-left" >Find your next green friend</h1>
+            <img class="img-ico-arrow-down" src="images/icons/arrow-down.svg" alt="">
+
+          </div>
+        </div>
+        <div class="div-img-center">
+          <picture>
+            <source media="(max-width: 550px)" srcset="images/hero/mobile/mobile-plantperson.png">
+            <img class="img-center" src="images/hero/desktop/plantperson.png" alt="">
+          </picture>
+        </div>
+        <div class="div-img-right">
+          <img class="img-right" src="images/hero/desktop/right-leaves.png" alt="">
+        </div>
+      </div>
+    </header>
+    <section class="menu">
+      <div class="menu-filter">
+        <div class="container">
+          <div class="filter-sun filter">
+            <img class="img-sun img-menu" src="images/illustrations/sun.png" alt="sun">
+            <p class="all-p"><b>1.</b> Set the amount of <b>sunlight</b> your plant will get.</p>
+            <select id="select-sun" onchange="getSelectValueSun(), changeDisplaySun(), selectOffSun()" class="select-all" name="Water">
+              <option value="Select" selected>Select...</option>
+              <option value="No">No</option>
+              <option value="Low">Low</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+          <div class="filter-water filter">
+            <img class="img-water img-menu" src="images/illustrations/wateringcan.png" alt="watertingcan">
+            <p class="all-p"><b>2.</b> How often do you want to <b>water</b> your plant?</p>
+            <select id="select-water" onchange="getSelectValueWater(), changeDisplayWater(), selectOffWater()" class="select-all" name="Water">
+              <option value="Select" selected>Select...</option>
+              <option value="Regularly">Regularly</option>
+              <option value="Daily">Daily</option>
+              <option value="Rarely">Rarely</option>
+            </select>
+          </div>
+          <div class="filter-pet filter">
+            <img class="img-dog img-menu" src="images/illustrations/dog.png" alt="dog">
+            <p class="all-p"><b>3.</b> Do you have pets? Do they <b>chew</b> plants?</p>
+            <select id="select-pet" onchange="getSelectValuePet(), chageDisplayPet(), selectOffPet()" class="select-all" name="Pet">
+              <option value="Select" selected>Select...</option>
+              <option value="True">True</option>
+              <option value="False">False</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="notfound">
+      <div>
+        <div class="container-notfound">
+          <div class="text-not-found">
+            <h1>No result yet...</h1>
+            <p>Use the filters above to find the plants that best fits your environment :)</p>
+          </div>
+          <div>
+            <img class="img-not-found" src="images/illustrations/no-results.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <main>
+      <section id="sun-no">
+        <div class="container-plantas">
+          <img class="img-pick" src="images/illustrations/pick.png" alt="">
+          <h1 class="our-picks">Our picks for you</h1>
+          <div class="flores-elementos">
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/pilea-peperomioides.png" alt="pilea">
+              <p>Pilea peperomioides</p>
+              <p>$50</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/calathea-triostar.png" alt="calathea">
+              <p>Calathea triostar</p>
+              <p>$50</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/monstera-deliciosa.png" alt="montera">
+              <p>Monstera deliciosa</p>
+              <p>$50</p>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      <section id="sun-low">
+        <div class="container-plantas">
+          <img class="img-pick" src="images/illustrations/pick.png" alt="">
+          <h1 class="our-picks">Our picks for you</h1>
+          <div class="flores-elementos">
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/lucky-bamboo.png" alt="bamboo">
+              <p>Bamboo</p>
+              <p>$15</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/ponytail-palm.png" alt="Ponytail Palm">
+              <p>Ponytail Palm</p>
+              <p>$50</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sun-high">
+        <div class="container-plantas">
+          <img class="img-pick" src="images/illustrations/pick.png" alt="">
+          <h1 class="our-picks">Our picks for you</h1>
+          <div class="flores-elementos">
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/bunny-ears-cacti.png" alt="Bunny ears cacti">
+              <p>Bunny ears cacti</p>
+              <p>$20</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/ficus-lyrata.png" alt="ficus-lyrata">
+              <p>Ficus Lyrata</p>
+              <p>$30</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/succulent-bowl.png" alt="Succulent Bowl">
+              <p>Succulent Bowl</p>
+              <p>$30</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/euphorbia-eritrea.png" alt="Euphorbia eritrea">
+              <p>Euphorbia eritrea</p>
+              <p>$25</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="water-regulary">
+        <div class="container-plantas">
+          <img class="img-pick" src="images/illustrations/pick.png" alt="">
+          <h1 class="our-picks">Our picks for you</h1>
+          <div class="flores-elementos">
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/lucky-bamboo.png" alt="bamboo">
+              <p>Bamboo</p>
+              <p>$15</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/ponytail-palm.png" alt="Ponytail Palm">
+              <p>Ponytail Palm</p>
+              <p>$50</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/ficus-lyrata.png" alt="Ficus lyrata">
+              <p>Ficus lyrata</p>
+              <p>$30</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/pilea-peperomioides.png" alt="Pilea peperomioides">
+              <p>Pilea peperomioides</p>
+              <p>$50</p>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      <section id="water-daily" >
+        <div class="container-plantas">
+          <img class="img-pick" src="images/illustrations/pick.png" alt="">
+          <h1 class="our-picks">Our picks for you</h1>
+          <div class="flores-elementos">
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/calathea-triostar.png" alt="Calathea triostar">
+              <p>Calathea triostar</p>
+              <p>$50</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/monstera-deliciosa.png" alt="Monstera deliciosa">
+              <p>Monstera deliciosa</p>
+              <p>$50</p>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      <section id="water-rarely">
+        <div class="container-plantas">
+          <img class="img-pick" src="images/illustrations/pick.png" alt="">
+          <h1 class="our-picks">Our picks for you</h1>
+          <div class="flores-elementos">
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/euphorbia-eritrea.png" alt="Euphorbia eritrea">
+              <p>Euphorbia eritrea</p>
+              <p>$25</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/succulent-bowl.png" alt="Succulent Bowl">
+              <p>Succulent Bowl</p>
+              <p>$30</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/bunny-ears-cacti.png" alt="Bunny ears cacti">
+              <p>Bunny ears cacti</p>
+              <p>$20</p>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      <section id="toxicity-true">
+        <div class="container-plantas">
+          <img class="img-pick" src="images/illustrations/pick.png" alt="">
+          <h1 class="our-picks">Our picks for you</h1>
+          <div class="flores-elementos">
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/pilea-peperomioides.png" alt="Pilea peperomioides">
+              <p>Pilea peperomioides</p>
+              <p>$50</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/calathea-triostar.png" alt="Calathea triostar">
+              <p>Calathea triostar</p>
+              <p>$50</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/monstera-deliciosa.png" alt="Monstera deliciosa">
+              <p>Monstera deliciosa</p>
+              <p>$50</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="toxicity-false">
+        <div class="container-plantas">
+          <img class="img-pick" src="images/illustrations/pick.png" alt="">
+          <h1 class="our-picks">Our picks for you</h1>
+          <div class="flores-elementos">
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/euphorbia-eritrea.png" alt="Euphorbia eritrea">
+              <p>Euphorbia eritrea</p>
+              <p>$25</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/succulent-bowl.png" alt="Succulent Bowl">
+              <p>Succulent Bowl</p>
+              <p>$30</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/bunny-ears-cacti.png" alt="Bunny ears cacti">
+              <p>Bunny ears cacti</p>
+              <p>$20</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/ficus-lyrata.png" alt="Ficus lyrata">
+              <p>Ficus lyrata</p>
+              <p>$30</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/lucky-bamboo.png" alt="Bamboo">
+              <p>Bamboo</p>
+              <p>$15</p>
+            </div>
+            <div class="flor-folder">
+              <img class="img-flor" src="images/plant photos/ponytail-palm.png" alt="Ponytail Palm">
+              <p>Ponytail Palm</p>
+              <p>$50</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
   </body>
 </html>
