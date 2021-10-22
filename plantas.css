@@ -1,0 +1,155 @@
+#sun-no{
+    width: 100vw;
+    background-color: var(--fundoCinza);
+    display: none;
+}
+
+#sun-low{
+    width: 100vw;
+    background-color: var(--fundoCinza);
+    display: none;
+}
+
+#sun-high{
+    width: 100vw;
+    background-color: var(--fundoCinza);
+    display: none;
+}
+
+#water-regulary{
+    width: 100vw;
+    background-color: var(--fundoCinza);
+    display: none;
+}
+
+#water-daily{
+    width: 100vw;
+    background-color: var(--fundoCinza);
+    display: none;
+}
+
+#water-rarely{
+    width: 100vw;
+    background-color: var(--fundoCinza);
+    display: none;
+}
+
+#toxicity-true{
+    width: 100vw;
+    background-color: var(--fundoCinza);
+    display: none;
+}
+
+#toxicity-false{
+    width: 100vw;
+    background-color: var(--fundoCinza);
+    display: none;
+}
+
+
+
+.container-plantas{
+    width: 70vw;
+    margin: auto;
+    padding: 50px;
+}
+.img-pick{
+    width: 160px;
+}
+.our-picks{
+    color: var(--verdeEscuro);
+    font-size: 3.6rem;
+}
+
+.flores-elementos{
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.flor-folder{
+    background-color: white;
+    border-radius: 2px;
+    width: 240px;
+    padding: 20px;
+    margin-right: 30px;
+    margin-top: 30px;
+    background-size: contain;
+}
+
+.img-flor{
+    
+    width: 220px;
+    height: 180px;
+    position: left;
+    background-size: cover;
+    margin: auto;
+}
+.flor-folder h1{
+    color: var(--verdeLetras);
+    font-weight: bold;
+    margin-top: 20px;
+}
+.flor-folder p{
+    color: var(--verdeLetras);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (max-width:915px){
+    .container-plantas{
+        width: 80vw;
+    }
+    .flor-folder{
+        
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width:800px){
+    .container-plantas{
+        width: 70vw;
+    }
+    .flor-folder{
+        
+        margin-bottom: 30px;
+        margin-right: 30px;
+        width: 300px;
+        height: 400px;
+    }
+    .img-flor{
+        max-height: 300px;
+        width: 220px;
+        
+    }
+    .flor-folder p{
+        font-size: 20px;
+    }
+}
+
+
+
+@media (max-width: 600px){
+    .container-plantas{
+        width: 80vw;
+    }
+    .our-picks{
+        font-size: 3.4rem;
+    }
+    .flor-folder{
+        margin: auto;
+        width: 280px;
+        margin-right: none;
+        margin-bottom: 40px;
+    }
+    .img-flor{
+        height: 300px;
+        width: 220px;
+        
+        
+    }
+    .flor-folder p{
+        font-size: 20px;
+    }
+}
